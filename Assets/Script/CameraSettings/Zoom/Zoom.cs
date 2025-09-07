@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Zoom : Pan
 {
+    [Header("Zoom Settings")]
+    public float minZoomDistance = 2f;
+    public float maxZoomDistance = 300f;
     public float zoomSpeed = 30f;
 
     /// <summary> Handles camera zooming. </summary>
@@ -9,8 +12,8 @@ public class Zoom : Pan
     {
         float zoomDelta = 0f;
 
-        if (Input.GetMouseButton(1)) // RMB drag
-            zoomDelta = Input.GetAxis("Mouse X") * zoomSpeed * 0.1f;
+        if (Input.GetMouseButton(1))
+            zoomDelta = Input.GetAxis("Mouse X") * (zoomSpeed * Time.deltaTime);
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (Mathf.Abs(scroll) > 0.01f)

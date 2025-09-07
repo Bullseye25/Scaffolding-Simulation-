@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class CameraControl : Zoom
 {
+    [Header("Camera Controls Setting")]
+    public float moveSpeed = 10f;
+    public float fastMoveMultiplier = 5f;
+
     [Header("Key Bindings")]
     public KeyCode orbitKey = KeyCode.Mouse0;       // Orbit with LMB
     public KeyCode zoomKey = KeyCode.Mouse1;        // Zoom with RMB

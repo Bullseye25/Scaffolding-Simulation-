@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b6f994705f5824fac646e91f27f5fc, type: 3}
+  m_Name: Support-Pillar
+  m_EditorClassIdentifier: 
+  elementName: Support-Pillar
+  icon: {fileID: 1542584229, guid: a4632670dbfe89b4c8c23f26738dae72, type: 3}
+  prefab: {fileID: 8115360810688847614, guid: ab483b3122bb97e40bfcd1f4bab46fb5, type: 3}

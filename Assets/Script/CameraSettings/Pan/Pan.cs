@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Pan : Orbit
 {
+    [Header("Pan Settings")]
     public float panSpeed = 1.5f;
 
     /// <summary> Handles camera panning movement. </summary>

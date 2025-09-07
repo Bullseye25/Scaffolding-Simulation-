@@ -11,14 +11,8 @@ public enum CameraAction
 [RequireComponent(typeof(Camera))]
 public class Orbit : MonoBehaviour
 {
-    [Header("Movement Speeds")]
-    public float moveSpeed = 10f;
-    public float fastMoveMultiplier = 5f;
+    [Header("Orbit Settings")]
     public float rotationSpeed = 5f;
-
-    [Header("Zoom Limits")]
-    public float minZoomDistance = 2f;
-    public float maxZoomDistance = 300f;
 
     protected Camera cam;
     protected Vector3 pivot = Vector3.zero;

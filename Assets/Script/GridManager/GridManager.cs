@@ -2,9 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class GridTileEvent : UnityEvent<GameObject> { }
-
 public class GridManager : MonoBehaviour
 {
     [Header("Grid Settings")]
@@ -16,9 +13,9 @@ public class GridManager : MonoBehaviour
     [SerializeField] protected Material materialB; // Second material
 
     [Header("Events")]
-    public UnityEvent OnGridCreateBeginning;
-    public UnityEvent OnGridCreateEnd;
-    public GridTileEvent OnGridCreateInProcess;
+    [SerializeField] private UnityEvent OnGridBeginning;
+    [SerializeField] private GameObjectHandler OnGridInProcess;
+    [SerializeField] private UnityEvent OnGridEnd;
 
     protected readonly List<GameObject> gridTiles = new List<GameObject>();
 
@@ -31,7 +28,7 @@ public class GridManager : MonoBehaviour
 
         if (!ValidateMaterials()) return;
 
-        OnGridCreateBeginning?.Invoke();
+        OnGridBeginning?.Invoke();
 
         for (int x = 0; x < width; x++)
         {
@@ -41,11 +38,11 @@ public class GridManager : MonoBehaviour
                 ConfigureTile(tile, x, z);
                 gridTiles.Add(tile);
 
-                OnGridCreateInProcess?.Invoke(tile);
+                OnGridInProcess?.Invoke(tile);
             }
         }
 
-        OnGridCreateEnd?.Invoke();
+        OnGridEnd?.Invoke();
     }
 
     [ContextMenu("Clear Grid")]
