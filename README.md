@@ -79,11 +79,8 @@ Includes full 3D camera movement:
 ---
 
 ## 🚀 How to Run
-1. Clone this repository  
+1. Switch and Clone "Development" branch repository  
 2. Open the project in **Unity 6.0.55f**  
-3. Load the main scene and press ▶ Play  
+3. Load the scene and press ▶ Play  
 
 ---
-
-## 📌 Notes
-This project was built as a demonstration of modular Unity systems. It can be extended for simulation games, educational tools, or prototyping 3D interactions.  
